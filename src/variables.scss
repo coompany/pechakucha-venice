@@ -1,0 +1,18 @@
+@import "../node_modules/bootstrap/scss/_variables";
+
+
+@font-face {
+  font-family: "Fakt Pro Normal";
+  font-weight: normal;
+  font-style: normal;
+  src: url('/assets/fonts/FaktPro-Normal.eot') format('embedded-opentype'),
+       url('/assets/fonts/FaktPro-Normal.ttf') format('truetype'),
+       url('/assets/fonts/FaktPro-Normal.woff') format('woff');
+}
+
+$yelow: #FFE500;
+
+$body-bg: $yellow;
+$body-color: $black;
+
+$font-family-base: "Fakt Pro Normal";

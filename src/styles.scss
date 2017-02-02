@@ -1,17 +1,16 @@
 @import "variables";
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap";
 
+
+@font-face {
+  font-family: "Fakt Pro Normal";
+  font-weight: normal;
+  font-style: normal;
+  src: url('/assets/fonts/FaktPro-Normal.eot') format('embedded-opentype'),
+       url('/assets/fonts/FaktPro-Normal.ttf') format('truetype'),
+       url('/assets/fonts/FaktPro-Normal.woff') format('woff');
+}
 
 body {
-  padding-top: 80px;
-}
-
-h1 {
-  font-size: 30px;
-  line-height: 34px;
-}
-
-h2 {
-  font-size: 18px;
-  line-height: 22px;
+  padding-top: $navbar-height;
 }

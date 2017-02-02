@@ -1,1 +1,33 @@
 @import "../../variables";
+
+
+@media (max-width: map-get($grid-breakpoints, 'sm')) {
+  nav {
+    .container {
+      width: 100%;
+    }
+  }
+}
+
+nav {
+  background-color: $yellow;
+  border-bottom: 2px solid black;
+  .navbar-brand {
+    color: black;
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        color: black;
+        border-bottom: 8px solid transparent;
+        &.active, &:hover {
+          border-bottom-color: black;
+        }
+      }
+    }
+  }
+  .navbar-toggler {
+    border-color: transparent;
+    color: black;
+  }
+}

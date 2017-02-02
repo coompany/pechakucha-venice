@@ -1,18 +1,58 @@
-@import "../node_modules/bootstrap/scss/_variables";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
 
 
-@font-face {
-  font-family: "Fakt Pro Normal";
-  font-weight: normal;
-  font-style: normal;
-  src: url('/assets/fonts/FaktPro-Normal.eot') format('embedded-opentype'),
-       url('/assets/fonts/FaktPro-Normal.ttf') format('truetype'),
-       url('/assets/fonts/FaktPro-Normal.woff') format('woff');
-}
 
-$yelow: #FFE500;
+$navbar-height: 56px;       // this has been taken from computed styles
+
+$yellow: #FFE500;
 
 $body-bg: $yellow;
 $body-color: $black;
+$link-color: $body-color;
+$link-hover-color: $body-color;
 
 $font-family-base: "Fakt Pro Normal";
+
+$spacer-y: 20px;
+
+$mdi-font-path: '/assets/fonts';
+
+
+@mixin button-pecha-variant($color: #fff, $bg-color: #000,
+                            $color-hover: #000, $bg-hover: #fff) {
+  color: $color;
+  background-image: none;
+  background-color: $bg-color;
+  border-color: $black;
+  border-radius: 0;
+  border-width: 2px;
+  font-family: $font-family-base;
+  height: 60px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  @include hover {
+    color: $color-hover;
+    background-color: $bg-hover;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 2px rgba($color, .5);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $color;
+    background-color: transparent;
+    border-color: $color;
+  }
+
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    color: $color-hover;
+    border-color: $color-hover;
+  }
+}

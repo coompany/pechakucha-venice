@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { BackendService } from './backend.service';
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ BackendService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

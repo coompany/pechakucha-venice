@@ -52,6 +52,9 @@
   &.btn-pecha-ghost {
     @include button-pecha-variant($black, transparent, $white, $black);
   }
+  &.btn-pecha-danger {
+    @include button-pecha-variant($red, $black, $white, $red);
+  }
 }
 a[class*="btn-pecha-"] {
   padding-top: 18px;

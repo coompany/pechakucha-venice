@@ -45,8 +45,9 @@ $mdi-font-path: '/assets/fonts';
   &.disabled,
   &:disabled {
     color: $color;
-    background-color: transparent;
+    background-color: $bg-color;
     border-color: $color;
+    opacity: 1;
   }
 
   &:active,

@@ -20,6 +20,8 @@ nav {
       .nav-link {
         color: black;
         border-bottom: 8px solid transparent;
+        font-size: 30px;
+        line-height: 34px;
         &.active, &:hover {
           border-bottom-color: black;
         }

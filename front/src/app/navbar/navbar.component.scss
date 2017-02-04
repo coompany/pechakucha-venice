@@ -1,17 +1,10 @@
 @import "../../variables";
 
 
-@media (max-width: map-get($grid-breakpoints, 'sm')) {
-  nav {
-    .container {
-      width: 100%;
-    }
-  }
-}
-
 nav {
   background-color: $yellow;
   border-bottom: 2px solid black;
+  min-height: $navbar-height;
   .navbar-brand {
     color: black;
   }
@@ -31,5 +24,20 @@ nav {
   .navbar-toggler {
     border-color: transparent;
     color: black;
+  }
+}
+
+
+@media (max-width: map-get($grid-breakpoints, 'sm')) {
+  nav {
+    min-height: 50px;
+    .navbar-brand {
+      img {
+        max-height: 50px;
+      }
+    }
+    .container {
+      width: 100%;
+    }
   }
 }

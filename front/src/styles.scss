@@ -14,3 +14,9 @@
 body {
   padding-top: $navbar-height;
 }
+
+@media (max-width: map-get($grid-breakpoints, 'sm')) {
+  body {
+    padding-top: 74px;
+  }
+}

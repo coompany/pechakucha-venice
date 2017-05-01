@@ -10,6 +10,7 @@ import { BackendService } from './backend.service';
 import { EDITION_PROVIDER, EditionsService } from './editions';
 import { ContentComponent } from './content/content.component';
 import { EditionGuard } from './edition-guard';
+import { RegistrationComponent } from './registration/registration.component';
 
 
 
@@ -33,7 +34,8 @@ const ROUTES: Routes = [
   declarations: [
     AppComponent,
     NavbarComponent,
-    ContentComponent
+    ContentComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,6 @@
 import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { BackendService } from '../backend.service';
-import { Email } from '../email';
 import { EditionsService, Edition } from '../editions';
 
 
@@ -15,13 +13,9 @@ export class ContentComponent implements OnInit, AfterViewChecked {
 
   edition: Edition;
   editionsLinks: { slug: string, name: string }[];
-  emailStatus: { text: string, sent: boolean, model: Email };
 
-  constructor(private backendService: BackendService,
-              private editionsService: EditionsService,
-              private route: ActivatedRoute) {
-    this.restoreEmailStatus();
-  }
+  constructor(private editionsService: EditionsService,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -37,34 +31,6 @@ export class ContentComponent implements OnInit, AfterViewChecked {
       window.getComputedStyle(document.querySelector('#timeline li:last-child')).height);
     let ss = <CSSStyleSheet>document.styleSheets[0];
     ss.insertRule(`#timeline::before { height: ${h-lih}px !important; }`, 0);
-  }
-
-  restoreEmailStatus(email: Email = new Email()) {
-    this.emailStatus = {
-      text: 'Invia la tua proposta',
-      sent: false,
-      model: email
-    }
-  }
-
-  sendEmail() {
-    this.emailStatus.text = 'Inviando...';
-
-    const delay = 3000;
-    let obs = this.backendService.sendEmail(this.emailStatus.model);
-
-    obs.subscribe(() => {
-      this.emailStatus.text = 'Iscrizione inviata con successo';
-      this.emailStatus.sent = true;
-      window.setTimeout(() => { this.restoreEmailStatus() }, delay);
-    }, err => {
-      this.emailStatus.text = 'Errore di invio. Riprova';
-      this.emailStatus.sent = true;
-      console.error(err);
-      window.setTimeout(() => {
-        this.restoreEmailStatus(this.emailStatus.model)
-      }, delay);
-    });
   }
 
 }

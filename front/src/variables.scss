@@ -19,6 +19,12 @@ $spacer-y: 20px;
 $mdi-font-path: '/assets/fonts';
 
 
+@mixin full-width {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+
 @mixin button-pecha-variant($color: #fff, $bg-color: #000,
                             $color-hover: #000, $bg-hover: #fff) {
   color: $color;

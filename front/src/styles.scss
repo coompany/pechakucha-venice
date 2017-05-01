@@ -15,6 +15,34 @@ body {
   padding-top: $navbar-height;
 }
 
+.h1 {
+  font-size: 30px;
+  line-height: 34px;
+  word-wrap: break-word;
+}
+
+.h2 {
+  font-size: 18px;
+  line-height: 22px;
+  word-wrap: break-word;
+}
+
+.filetto1 {
+  border-top: 16px solid black;
+  padding-top: 10px;
+}
+
+.filetto2 {
+  border-top: 2px solid black;
+  padding-top: 10px;
+  margin-bottom: 60px;
+}
+
+.full-width {
+  @include full-width;
+}
+
+
 @media (max-width: map-get($grid-breakpoints, 'sm')) {
   body {
     padding-top: 74px;

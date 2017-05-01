@@ -1,0 +1,203 @@
+<section>
+  <div class="full-width">
+    <img src="/assets/PechaKucha_Header.png" class="img-fluid" />
+  </div>
+</section>
+
+<section class="home-section" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h1 class="h1 filetto1">About</h1>
+        <h2 class="h1 my-5" [innerHTML]="edition.about.subtitle"></h2>
+      </div>
+    </div>
+    <div class="row" [innerHTML]="edition.about.content"></div>
+  </div>
+</section>
+
+<section class="home-section bg-white" id="partecipa">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h1 class="h1 filetto1">Partecipa</h1>
+        <h2 class="h1 my-5">
+          Iscriviti al PechaKucha Venezia come relatore.<br />
+          Proponi il tuo progetto per vivere da protagonista l’evento
+          globale su Venezia! Compila il form per candidarti.
+        </h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-8">
+          <form id="form-partecipa" #partecipaForm="ngForm" (ngSubmit)="sendEmail()">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input class="form-control" required type="text" name="nome"
+                       [(ngModel)]="emailStatus.model.name" placeholder="Nome" />
+              </div>
+              <div class="col-md-6 form-group">
+                <input class="form-control" required type="text" name="cognome"
+                       [(ngModel)]="emailStatus.model.surname" placeholder="Cognome" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 form-group">
+                <input class="form-control" required type="email" name="email"
+                       [(ngModel)]="emailStatus.model.address" placeholder="Email" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 form-group">
+                <label for="descrizione">Descrizione progetto</label>
+                <textarea class="form-control" required name="descrizione" rows="8"
+                          [(ngModel)]="emailStatus.model.message"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 form-group">
+                <button type="submit" class="btn btn-pecha-full"
+                        [disabled]="emailStatus.sent || partecipaForm.invalid">
+                  {{ emailStatus.text }}
+                </button>
+              </div>
+            </div>
+            <div class="row my-3">
+              <div class="col-12">
+                <p>
+                  Sarai ricontattato alla mail sopra indicata per l’invio della presentazione.
+                  <br />
+                  Ricordati di seguire le specifiche tecniche segnalate nel PDF scaricabile.
+                </p>
+                <p>
+                  <a href="/assets/PechaKucha_Specifiche-tecniche_20170209.pdf"
+                     target="_blank" class="btn btn-pecha-ghost">Scarica il PDF</a>
+                </p>
+              </div>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <h1 class="h1 filetto2">Timetable</h1>
+      </div>
+    </div>
+    <div class="row justify-content-end">
+      <div class="col-8">
+        <ul class="list-unstyled" id="timeline">
+          <li class="h1" *ngFor="let date of edition.timeTable">
+            {{ date.date }}<br />{{ date.name }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-section bg-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <h1 class="h1 filetto2">Location</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-5">
+        <a [href]="edition.location.mapUrl" target="_blank">
+          <img [src]="edition.location.staticImg" class="img-fluid img-gray" />
+        </a>
+      </div>
+      <div class="col-md-6" [innerHTML]="edition.location.content"></div>
+    </div>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <h1 class="h1 filetto2">Social streaming</h1>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-8">
+        <!-- <img src="http://placehold.it/1400x800/fff/fff" class="img-fluid" /> -->
+        <!-- <a href="https://twitter.com/intent/tweet?button_hashtag=PechakuchaVenezia"
+           class="twitter-hashtag-button" data-show-count="false">Tweet #PechakuchaVenezia</a>
+        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+        <!-- Place <div> tag where you want the feed to appear -->
+        <div id="curator-feed">
+          <a href="http://curator.io" target="_blank" class="crt-logo crt-tag">
+            Powered by Curator.io
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-section bg-white" id="contatti">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h1 class="h1 filetto1">Contatti</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p class="h1 my-3">
+          Per contattarci, scrivi a
+          <a href="mailto:info@pechakuchavenezia.org">info@pechakuchavenezia.org</a>
+        </p>
+        <p class="my-3">
+          <a class="btn btn-pecha-ghost" href="mailto:info@pechakuchavenezia.org">
+            Contattaci
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h1 class="h1 filetto2">Edizioni passate</h1>
+        <p class="h1">Scopri le precedenti edizioni di PechaKucha Venezia.</p>
+        <ul class="list-inline">
+          <li *ngFor="let e of editionsLinks" class="list-inline-item">
+            <a [routerLink]="['/', e.slug]" class="btn btn-pecha-ghost">{{ e.name }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-section bg-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <h1 class="h1 filetto2">Sponsor</h1>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-8">
+        <div class="row">
+          <div class="col-4 sponsor" *ngFor="let sponsor of edition.sponsor">
+            <a target="_blank" [href]="sponsor.link">
+              <img [src]="sponsor.img" class="img-fluid" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

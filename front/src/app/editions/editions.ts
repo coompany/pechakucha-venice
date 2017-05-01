@@ -1,10 +1,11 @@
 import { OpaqueToken } from '@angular/core';
-import { Edition, HeaderType } from './edition';
+import { Edition, NormalHeader, DraggableHeader } from './edition';
 
 
 export const ABITARE =
   new Edition(
-    'Abitare Venezia', false, HeaderType.Normal,
+    'Abitare Venezia', false,
+    new NormalHeader('/assets/PechaKucha_Header_abitare.png'),
     {
       subtitle: `
         Una notte di progetti su Venezia e per Venezia,
@@ -144,7 +145,11 @@ export const ABITARE =
 
 export const LAGUNA =
   new Edition(
-    'Habitat Laguna', true, HeaderType.DragDrop,
+    'Habitat Laguna', true,
+    new DraggableHeader(
+      '/assets/PechaKucha_background_laguna.png',
+      '/assets/PechaKucha_front_laguna.png'
+    ),
     {
       subtitle: `
         Una PechaKucha Night dedicata all’habitat lagunare e alle sue isole,

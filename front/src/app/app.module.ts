@@ -11,6 +11,7 @@ import { EDITION_PROVIDER, EditionsService } from './editions';
 import { ContentComponent } from './content/content.component';
 import { EditionGuard } from './edition-guard';
 import { RegistrationComponent } from './registration/registration.component';
+import { HeaderComponent } from './content/header.component';
 
 
 
@@ -35,7 +36,8 @@ const ROUTES: Routes = [
     AppComponent,
     NavbarComponent,
     ContentComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

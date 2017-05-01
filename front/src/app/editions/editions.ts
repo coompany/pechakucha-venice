@@ -142,10 +142,126 @@ export const ABITARE =
 
 
 
+export const LAGUNA =
+  new Edition(
+    'Habitat Laguna', true, HeaderType.DragDrop,
+    {
+      subtitle: `
+        Una PechaKucha Night dedicata all’habitat lagunare e alle sue isole,
+        tra proposte, progetti e ricerche.
+      `,
+      content: `
+        <div class="col-sm-6">
+          <p>
+            La laguna di Venezia si estende per circa 550 km<sup>2</sup>, di cui solo l’8% è
+            occupato da terra. Oltre un centianaio di isole di imparagonabile bellezza,
+            storia antichissima e paesaggi particolari vanno a costituire un ambiente sui
+            generis in continuo mutamento.
+          </p>
+          <p>
+            L’origine del nome Venetia,ae (pluralia tantum) indica come la città
+            veniva concepita già nel passato da una pluralità di elementi poi fusisi
+            assieme. Venezia era ed è costituita non da una singola isola ma
+            da un intero arcipelago. La storia di Venezia deve necessariamente
+            comprendere la storia delle sue numerosissime isole e del suo
+            habitat lagunare. È a questo arcipelago che la seconda edizione di
+            PechaKucha Venezia intende rivolgersi.
+          </p>
+          <p>
+            La capacità e la volontà di preservare dal mare questo arcipelago
+            ha portato già nel XIV secolo a deviare gli spostamenti fluviali e a
+            monitorare nei secoli la loro azione sulla gronda lagunare, nonché a
+            concepire metodi diversi, unici e straordinari per creare, mantenere e
+            sostenere un habitat assolutamente unico.
+          </p>
+        </div>
+        <div class="col-sm-6">
+          <p>
+            Oggi quest’ambiente così particolare, in precario equilibrio
+            ambientale, è minacciato dall’assenza di una strategia sostenibile e di
+            un approccio coordinato per la protezione del suo ecosistema, da cui
+            dipende la stessa sopravvivenza della laguna tutta.
+            A Venezia l’innalzamento del livello del mare causato dal cambiamento
+            climatico globale è aggravato dal fenomeno dell’abbassamento
+            (subsidenza) del suolo. Nell’ultimo secolo, nel complesso, Venezia è
+            affondata lentamente ma senza pause di 25 centimetri, tra gli 0,6 e
+            gli 1,6 millimetri all’anno. Sarà un’azione inesorabile o sostenibile e
+            contrastabile?
+          </p>
+          <p>
+            Con “Habitat Laguna” vogliamo connettere i numerosi progetti di
+            riqualificazione delle isole abbandonate con ricerche storiche e
+            archeologiche e i piani di recupero e conservazione ambientale.
+            Crediamo che la condivisione sia un mezzo fondamentale per
+            consolidare la consapevolezza dell’interdipendenza tra Venezia e il suo
+            Habitat e alimentare il dibattito sulla sua ri-valorizzazione.
+          </p>
+        </div>
+      `
+    },
+    [
+      {
+        date: '24.04',
+        name: 'Open call'
+      }, {
+        date: '10.05',
+        name: 'Deadline invio candidature'
+      }, {
+        date: '15.05',
+        name: 'Deadline invio presentazioni'
+      }, {
+        date: '21.05',
+        name: 'PechaKucha Night'
+      }
+    ],
+    {
+      mapUrl: 'https://maps.google.com/?q=Palazzo%20Michiel%20Strada%20Nuova,%204391%20Campo%20Santi%20Apostoli%20Venezia',
+      staticImg: 'https://maps.googleapis.com/maps/api/staticmap'+
+              '?center=Palazzo%20Michiel%20Strada%20Nuova,%204391%20Campo%20Santi%20Apostoli%20Venezia' +
+              '&zoom=16' +
+              '&size=600x600' +
+              '&maptype=roadmap' +
+              '&markers=color:red%7CPalazzo%20Michiel%20Strada%20Nuova,%204391%20Campo%20Santi%20Apostoli%20Venezia' +
+              '&key=AIzaSyDOtyBGM1ArybPLKhVIcBZzL_TKy2DWNxQ',
+      content: `
+        <p class="h1 mb-3">
+          Venezia Certosa Marina Resort<br />
+          Isola della Certosa<br />
+          Venezia
+        </p>
+        <p class="h1 mb-3">
+          È raggiungibile via vaporetto con la linea<br />
+          Actv ..., fermata ...
+        </p>
+        <p>
+          <a href="http://www.ventodivenezia.it" target="_blank">
+            www.ventodivenezia.it
+          </a>
+        </p>
+      `
+    },
+    [
+      {
+        img: '/assets/PechaKucha_Loghi_2_Coom.png',
+        link: 'http://www.coompany.eu/'
+      }, {
+        img: '/assets/PechaKucha_Loghi_1_Lacunae.png',
+        link: 'http://www.lacunaeproject.com/'
+      }, {
+        img: '/assets/PechaKucha_Loghi_7_Certosa.png',
+        link: 'http://www.ventodivenezia.it'
+      }
+    ]
+  );
+
+
+
+
 
 export function getEditions(): { [name: string]: Edition } {
   return {
-    'abitare': ABITARE
+    'abitare': ABITARE,
+    'laguna': LAGUNA
   };
 };
 

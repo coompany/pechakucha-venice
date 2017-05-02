@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { Location } from '@angular/common';
 
 
 @Component({
@@ -57,7 +56,7 @@ export class FooterComponent {
 
   @Input() edition: string;
 
-  constructor(private router: Router, private location: Location) { }
+  constructor(private router: Router) { }
 
   openSocial(evt: Event): boolean {
     const target = evt.target as HTMLAnchorElement

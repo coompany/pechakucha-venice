@@ -18,7 +18,7 @@ import { HeaderComponent } from './content/header.component';
 const ROUTES: Routes = [
   {
     path: '',
-    redirectTo: '/abitare',
+    redirectTo: '/laguna',
     pathMatch: 'full'
   }, {
     path: ':edition',
@@ -26,7 +26,7 @@ const ROUTES: Routes = [
     canActivate: [EditionGuard]
   }, {
     path: '**',
-    redirectTo: '/abitare'
+    redirectTo: '/laguna'
   }
 ];
 

@@ -14,9 +14,10 @@
   </div>
 </section>
 
-<section class="home-section bg-white" id="partecipa">
+<section class="home-section bg-white" [id]="edition.isLatest ? 'partecipa': 'evento'">
   <div class="container">
-    <app-registration></app-registration>
+    <app-registration *ngIf="edition.isLatest"></app-registration>
+    <app-gallery *ngIf="!edition.isLatest" [images]="edition.gallery"></app-gallery>
   </div>
 </section>
 

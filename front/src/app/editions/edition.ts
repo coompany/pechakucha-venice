@@ -18,6 +18,7 @@ export class Edition {
               public about: { subtitle: string, content: string },
               public timeTable: { date: string, name: string }[],
               public location: { mapUrl: string, staticImg: string, content: string },
-              public sponsor: { img: string, link: string }[]) { }
+              public sponsor: { img: string, link: string }[],
+              public gallery?: string[]) { }
 
 }

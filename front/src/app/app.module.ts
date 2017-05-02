@@ -13,6 +13,7 @@ import { EditionGuard } from './edition-guard';
 import { RegistrationComponent } from './registration/registration.component';
 import { HeaderComponent } from './content/header.component';
 import { FooterComponent } from './content/footer.component';
+import { GalleryComponent } from './content/gallery.component';
 
 
 
@@ -39,7 +40,8 @@ const ROUTES: Routes = [
     ContentComponent,
     RegistrationComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,

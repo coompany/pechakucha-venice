@@ -138,6 +138,20 @@ export const ABITARE =
         img: '/assets/PechaKucha_Loghi_5_IUAV.png',
         link: 'http://www.iuav.it/'
       }
+    ],
+    [
+      '/assets/gallery/abitare/IMG_9010.jpg',
+      '/assets/gallery/abitare/IMG_9016.jpg',
+      '/assets/gallery/abitare/IMG_9026.jpg',
+      '/assets/gallery/abitare/IMG_9047.jpg',
+      '/assets/gallery/abitare/IMG_9049.jpg',
+      '/assets/gallery/abitare/IMG_9062.jpg',
+      '/assets/gallery/abitare/IMG_9103.jpg',
+      '/assets/gallery/abitare/IMG_9112.jpg',
+      '/assets/gallery/abitare/IMG_9126.jpg',
+      '/assets/gallery/abitare/IMG_9140.jpg',
+      '/assets/gallery/abitare/IMG_9185.jpg',
+      '/assets/gallery/abitare/IMG_9222.jpg'
     ]
   );
 

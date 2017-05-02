@@ -12,6 +12,7 @@ import { ContentComponent } from './content/content.component';
 import { EditionGuard } from './edition-guard';
 import { RegistrationComponent } from './registration/registration.component';
 import { HeaderComponent } from './content/header.component';
+import { FooterComponent } from './content/footer.component';
 
 
 
@@ -37,7 +38,8 @@ const ROUTES: Routes = [
     NavbarComponent,
     ContentComponent,
     RegistrationComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

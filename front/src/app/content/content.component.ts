@@ -11,6 +11,7 @@ import { EditionsService, Edition } from '../editions';
 })
 export class ContentComponent implements OnInit, AfterViewChecked {
 
+  editionParam: string;
   edition: Edition;
   editionsLinks: { slug: string, name: string }[];
 
@@ -19,7 +20,8 @@ export class ContentComponent implements OnInit, AfterViewChecked {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.edition = this.editionsService.get(params['edition']);
+      this.editionParam = params['edition'];
+      this.edition = this.editionsService.get(this.editionParam);
     });
     this.editionsLinks = this.editionsService.links;
   }

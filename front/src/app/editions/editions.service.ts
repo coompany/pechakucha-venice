@@ -6,7 +6,7 @@ import { EDITIONS } from './editions';
 @Injectable()
 export class EditionsService {
 
-  constructor(@Inject(EDITIONS) private editions: { [name: string]: Edition }) { }
+  constructor(@Inject(EDITIONS) private editions: any) { }
 
   public get(name: string): Edition | null {
     const edition = this.editions[name];

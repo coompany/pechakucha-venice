@@ -1,4 +1,11 @@
-import { Component, Input, ElementRef, OnChanges, AfterViewChecked } from '@angular/core';
+import {
+  Component,
+  Input,
+  ElementRef,
+  OnChanges,
+  AfterViewChecked,
+  SimpleChanges
+} from '@angular/core';
 import { Edition, NormalHeader } from '../editions';
 declare var $: any;
 
@@ -21,7 +28,7 @@ type Vector2D<T> = { x: T, y: T };
   `,
   styles: [`
     #draggable {
-      background-size: 160%;
+      background-size: 275%;
     }
   `]
 })
@@ -34,7 +41,7 @@ export class HeaderComponent implements OnChanges, AfterViewChecked {
 
   constructor(private element: ElementRef) { }
 
-  ngOnChanges() {
+  ngOnChanges(changes: SimpleChanges) {
     this.loadIt = true;
   }
 
@@ -50,6 +57,7 @@ export class HeaderComponent implements OnChanges, AfterViewChecked {
 
   private onMouseDown(evt) {
     evt.preventDefault();
+    const initialZoom = 275;
     const mousedown: Vector2D<number> = {
       x: evt.originalEvent.pageX || evt.originalEvent.touches[0].pageX,
       y: evt.originalEvent.pageY || evt.originalEvent.touches[0].pageY
@@ -75,8 +83,8 @@ export class HeaderComponent implements OnChanges, AfterViewChecked {
           y: ( 100 * (mousepos.y - mousedown.y)) / 560
         };
         const actualMovePercentage: Vector2D<number> = {
-          x: (( (0.7 / ( 1 - (160 / 100) )) * movePercentage.x ) ),
-          y: (( (0.7 / ( 1 - (160 / 100) )) * movePercentage.y ) )
+          x: (( (0.7 / ( 1 - (initialZoom / 100) )) * movePercentage.x ) ),
+          y: (( (0.7 / ( 1 - (initialZoom / 100) )) * movePercentage.y ) )
         };
 
         let xpos = elepos.x + actualMovePercentage.x;

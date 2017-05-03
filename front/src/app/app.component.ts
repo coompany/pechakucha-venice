@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
+declare const $: any;
+
 
 @Component({
   selector: 'app-root',
@@ -13,13 +15,14 @@ export class AppComponent implements OnInit {
     router.events.subscribe(s => {
       if (s instanceof NavigationEnd) {
         const tree = router.parseUrl(router.url);
+        const $window = $(window);
         if (tree.fragment) {
           const element = document.querySelector(`#${tree.fragment}`);
           if (element) {
-            document.body.scrollTop += element.getBoundingClientRect().top - 60;
+            $window.scrollTop($window.scrollTop() + element.getBoundingClientRect().top - 60);
           }
         } else {
-          document.body.scrollTop = 0;
+          $window.scrollTop(0);
         }
       }
     });

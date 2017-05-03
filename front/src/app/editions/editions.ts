@@ -121,22 +121,28 @@ export const ABITARE =
     [
       {
         img: '/assets/PechaKucha_Loghi_6_Select.png',
-        link: 'http://www.selectaperitivo.it'
+        link: 'http://www.selectaperitivo.it',
+        col: 'col-4'
       }, {
         img: '/assets/PechaKucha_Loghi_1_Lacunae.png',
-        link: 'http://www.lacunaeproject.com/'
+        link: 'http://www.lacunaeproject.com/',
+        col: 'col-4'
       }, {
         img: '/assets/PechaKucha_Loghi_2_Coom.png',
-        link: 'http://www.coompany.eu/'
+        link: 'http://www.coompany.eu/',
+        col: 'col-4'
       }, {
         img: '/assets/PechaKucha_Loghi_3_ECC.png',
-        link: 'http://www.europeanculturalcentre.eu/index.php'
+        link: 'http://www.europeanculturalcentre.eu/index.php',
+        col: 'col-4'
       }, {
         img: '/assets/PechaKucha_Loghi_4_GAA.png',
-        link: 'http://www.globalartaffairs.org/'
+        link: 'http://www.globalartaffairs.org/',
+        col: 'col-4'
       }, {
         img: '/assets/PechaKucha_Loghi_5_IUAV.png',
-        link: 'http://www.iuav.it/'
+        link: 'http://www.iuav.it/',
+        col: 'col-4'
       }
     ],
     [
@@ -234,13 +240,13 @@ export const LAGUNA =
       }
     ],
     {
-      mapUrl: 'https://maps.google.com/?q=Palazzo%20Michiel%20Strada%20Nuova,%204391%20Campo%20Santi%20Apostoli%20Venezia',
+      mapUrl: 'https://maps.google.com/?q=' + encodeURIComponent('Isola della Certosa, Venezia'),
       staticImg: 'https://maps.googleapis.com/maps/api/staticmap'+
-              '?center=Palazzo%20Michiel%20Strada%20Nuova,%204391%20Campo%20Santi%20Apostoli%20Venezia' +
-              '&zoom=16' +
+              '?center=' + encodeURIComponent('Isola della Certosa, Venezia') +
+              '&zoom=13' +
               '&size=600x600' +
               '&maptype=roadmap' +
-              '&markers=color:red%7CPalazzo%20Michiel%20Strada%20Nuova,%204391%20Campo%20Santi%20Apostoli%20Venezia' +
+              '&markers=color:red%7C' + encodeURIComponent('Isola della Certosa, Venezia') +
               '&key=AIzaSyDOtyBGM1ArybPLKhVIcBZzL_TKy2DWNxQ',
       content: `
         <p class="h1 mb-3">
@@ -249,8 +255,7 @@ export const LAGUNA =
           Venezia
         </p>
         <p class="h1 mb-3">
-          È raggiungibile via vaporetto con la linea<br />
-          Actv ..., fermata ...
+          È raggiungibile via vaporetto con la linea Actv 4.2, fermata Certosa su richiesta.
         </p>
         <p>
           <a href="http://www.ventodivenezia.it" target="_blank">
@@ -262,13 +267,20 @@ export const LAGUNA =
     [
       {
         img: '/assets/PechaKucha_Loghi_2_Coom.png',
-        link: 'http://www.coompany.eu/'
+        link: 'http://www.coompany.eu/',
+        col: 'col-3'
       }, {
         img: '/assets/PechaKucha_Loghi_1_Lacunae.png',
-        link: 'http://www.lacunaeproject.com/'
+        link: 'http://www.lacunaeproject.com/',
+        col: 'col-3'
       }, {
         img: '/assets/PechaKucha_Loghi_7_Certosa.png',
-        link: 'http://www.ventodivenezia.it'
+        link: 'http://www.ventodivenezia.it',
+        col: 'col-3'
+      }, {
+        img: '/assets/PechaKucha_Loghi_5_IUAV.png',
+        link: 'http://www.iuav.it/',
+        col: 'col-3'
       }
     ]
   );

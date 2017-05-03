@@ -86,16 +86,16 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-8">
-        <h1 class="h1 filetto1">Contatti</h1>
+        <h1 class="h1 filetto1 mb-60">Contatti</h1>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <p class="h1 my-3">
+        <p class="h1 mb-60">
           Per contattarci, scrivi a
           <a href="mailto:info@pechakuchavenezia.org">info@pechakuchavenezia.org</a>
         </p>
-        <p class="my-3">
+        <p>
           <a class="btn btn-pecha-ghost" href="mailto:info@pechakuchavenezia.org">
             Contattaci
           </a>
@@ -114,9 +114,9 @@
     </div>
     <div class="row">
       <div class="col">
-        <p class="h1">Scopri le altre edizioni di PechaKucha Venezia.</p>
+        <p class="h1 mb-60">Scopri le altre edizioni di PechaKucha Venezia.</p>
         <ul class="list-inline">
-          <li *ngFor="let e of editionsLinks" class="list-inline-item">
+          <li *ngFor="let e of editionsLinks" class="list-inline-item mr-3 mb-3">
             <a [routerLink]="['/', e.slug]" class="btn btn-pecha-ghost">{{ e.name }}</a>
           </li>
         </ul>
@@ -135,7 +135,7 @@
     <div class="row justify-content-center">
       <div class="col-sm-8">
         <div class="row">
-          <div class="col-4 sponsor" *ngFor="let sponsor of edition.sponsor">
+          <div class="sponsor" [ngClass]="sponsor.col" *ngFor="let sponsor of edition.sponsor">
             <a target="_blank" [href]="sponsor.link">
               <img [src]="sponsor.img" class="img-fluid" />
             </a>

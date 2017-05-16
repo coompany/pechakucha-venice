@@ -255,7 +255,10 @@ export const LAGUNA =
           Venezia
         </p>
         <p class="h1 mb-3">
-          È raggiungibile via vaporetto con la linea Actv 4.2, fermata Certosa su richiesta.
+          Vaporetto Actv<br />
+          fermata Certosa<br />
+          fino alle 21.00 linea 4.1 e 4.2<br />
+          dopo le 21.00 linea 5.1 e 5.2
         </p>
         <p>
           <a href="http://www.ventodivenezia.it" target="_blank">

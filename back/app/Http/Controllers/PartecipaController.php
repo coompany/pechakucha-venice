@@ -16,14 +16,8 @@ class PartecipaController extends Controller
         $mail->Host = env('SMTP_HOST');
         $mail->Username = env('SMTP_USERNAME');
         $mail->Password = env('SMTP_PASSWORD');
+        $mail->SMTPSecure = 'ssl';
         $mail->SMTPAuth = true;
-        $mail->SMTPOptions = array(
-            'ssl' => array(
-                'verify_peer' => false,
-                'verify_peer_name' => false,
-                'allow_self_signed' => true
-            )
-        );
         $mail->Port = (int) env('SMTP_PORT');
 
         $mail->setFrom(env('PARTECIPA_FROM_ADDRESS'));
